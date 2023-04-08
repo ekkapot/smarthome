@@ -1,0 +1,122 @@
+type: custom:stack-in-card
+cards:
+  - type: conditional
+    conditions:
+      - entity: media_player.music
+        state: 'off'
+    card:
+      type: custom:paper-buttons-row
+      buttons:
+        - entity: switch.music
+          icon: mdi:music
+          layout: icon_name
+          name: Music
+          state_styles:
+            'off':
+              button:
+                position: absolute;
+                top: 50%;
+                border-radius: 100%;
+                width: 42px
+                height: 42px
+                margin-top: '-46px'
+                filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.2))
+                background: >-
+                  var(--ha-card-background,
+                  var(--card-background-color, white));
+                background-size: 140% 70%
+                background-repeat: no-repeat
+                background-position: 50% 100%
+                background-color: '#3e4c69'
+              icon:
+                margin-top: 44px
+              name:
+                margin-top: 20px
+                width: 100px
+            'on':
+              button:
+                display: none;
+  - type: conditional
+    conditions:
+      - entity: media_player.music
+        state_not: 'off'
+    card:
+      type: custom:mini-media-player
+      volume_stateless: true
+      name: Music
+      group: false
+      volume_step: '3'
+      entity: media_player.music
+      sound_mode: full
+      artwork: full-cover
+      toggle_power: false
+      source: icon
+      hide:
+        name: true
+        source: true
+      style: |
+        ha-card {
+          height: 100% !important;
+          width: 100% !important;
+          position: absolute !important;
+        } 
+        .flex {
+          display: block;
+          {% if not is_state('media_player.music','off') %}
+          filter: drop-shadow(0px 2px 2px rgba(0,0,0,1));
+          {% else %}
+          {% endif %}
+        } 
+        ha-card.--has-artwork .cover{
+          opacity: 0.9;
+        }
+        .entity__info__media {
+          opacity: 1 !important;
+          padding-right: 16px;
+          overflow: hidden;
+          height: 4.4em;
+          height: 100%;
+        }
+        ha-card > div.mmp-player > div.mmp-player__core.flex
+        > div.entity__icon {
+          {% if not is_state('media_player.music','off') %}
+          display: none;
+          {% endif %}
+        } ha-card > div.mmp-player >
+        div.mmp-player__core.flex { }
+        mmp-media-controls {
+          {% if not is_state('media_player.music','off') %}
+          filter: drop-shadow(0px 2px 2px rgba(0,0,0,1));
+          flex-wrap: wrap-reverse !important;
+          {% endif %}
+        } mmp-powerstrip  {
+        } ha-card > div.mmp-player {
+          padding: 12px !important;
+          {% if not is_state('media_player.music','off') %}
+          {% else %}
+          #display: none !important;
+          {% endif %}
+        } ha-card > div.mmp-player {
+          {% if is_state_attr('media_player.bedroom_speaker','media_content_id', 'Bluetooth') %}
+          position: relative;
+          height: 20vh;
+          {% else %}
+          position: absolute;
+          align-self: flex-start;
+          height: 100%;
+          {% endif %}
+          background: radial-gradient(circle, rgba(255,255,255,0) 10%, rgba(0,0,0,0.6) 100%) !important;
+          font-size: 0.9em !important;
+        } ha-card > div.mmp-player > div.mmp-player__adds {
+          position: absolute;
+          bottom: 14px;
+          padding: 0 16px 0 0;
+        } div.flex.mmp-media-controls__media {
+            margin-bottom: -5px !important;
+        }
+style: |
+  ha-card {
+    height: 100% !important;
+    width: 100% !important;
+  }
+  
