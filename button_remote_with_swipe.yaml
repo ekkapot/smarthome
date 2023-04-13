@@ -1,0 +1,437 @@
+type: vertical-stack
+cards:
+  - square: true
+    columns: 4
+    type: grid
+    cards:
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: toggle
+        entity: null
+        hold_action:
+          action: none
+        show_state: false
+        icon: mdi:movie
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: toggle
+        entity: null
+        hold_action:
+          action: none
+        icon: mdi:movie-off
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: toggle
+        entity: null
+        hold_action:
+          action: none
+        show_state: false
+        icon: mdi:speaker
+        card_mod:
+          style: |
+            ha-card {
+              --rgb-state-light-color: white;
+            }
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: toggle
+        entity: null
+        show_state: false
+        hold_action:
+          action: none
+        icon: mdi:microsoft-xbox
+  - type: custom:swipe-card
+    parameters:
+      slidesPerView: 4
+      spaceBetween: 8
+    cards:
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: HBO Max
+          target:
+            entity_id: media_player.android_tv
+        hold_action:
+          action: none
+        icon: phu:hbo-max
+        icon_height: 68px
+        style: |
+          ha-card {
+            --paper-item-icon-color: white;
+            background: #310550;
+          }
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: Xbox One
+          target:
+            entity_id: media_player.android_tv
+        icon: phu:xbox
+        hold_action:
+          action: none
+        icon_height: 60px
+        style: |
+          ha-card {
+            --paper-item-icon-color: white;
+            background: #107c0f;
+          }
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: Netflix
+          target:
+            entity_id: media_player.android_tv
+        icon: mdi:netflix
+        hold_action:
+          action: none
+        icon_height: 60px
+        style: |
+          ha-card {
+            --paper-item-icon-color: #e50913;
+            background: black;
+          }
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: Prime Video
+          target:
+            entity_id: media_player.android_tv
+        hold_action:
+          action: none
+        icon: phu:prime-video
+        icon_height: 68px
+        style: |
+          ha-card {
+            --paper-item-icon-color: #00a9e0;
+            background: #1a222d;
+          }
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: Disney Plus
+          target:
+            entity_id: media_player.android_tv
+        hold_action:
+          action: none
+        icon: phu:disney-plus
+        icon_height: 68px
+        style: |
+          ha-card {
+            --paper-item-icon-color: white;
+            background: #011479;
+          }
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: Hulu
+          target:
+            entity_id: media_player.android_tv
+        entity: ''
+        icon: mdi:hulu
+        hold_action:
+          action: none
+        icon_height: 60px
+        style: |
+          ha-card {
+            --paper-item-icon-color: #1de783;
+            background: #0e1c25;
+          }
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: Peacock TV
+          target:
+            entity_id: media_player.android_tv
+        hold_action:
+          action: none
+        icon: phu:peacock
+        icon_height: 68px
+        style: |
+          ha-card {
+            --paper-item-icon-color: white;
+            background: black;
+          }
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: Paramount Plus
+          target:
+            entity_id: media_player.android_tv
+        hold_action:
+          action: none
+        icon: phu:paramount
+        icon_height: 68px
+        style: |
+          ha-card {
+            --paper-item-icon-color: white;
+            background: #0065ff;
+          }
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: Plex
+          target:
+            entity_id: media_player.android_tv
+        icon: mdi:plex
+        hold_action:
+          action: none
+        icon_height: 60px
+        style: |
+          ha-card {
+            --paper-item-icon-color: #efb102;
+            background: #262a2d;
+          }
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: iHeart
+          target:
+            entity_id: media_player.android_tv
+        icon: mdi:radio
+        hold_action:
+          action: none
+        icon_height: 60px
+        style: |
+          ha-card {
+            --paper-item-icon-color: white;
+            background: #c6002b;
+          }
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: YouTube
+          target:
+            entity_id: media_player.android_tv
+        icon: phu:youtube
+        hold_action:
+          action: none
+        icon_height: 60px
+        style: |
+          ha-card {
+            --paper-item-icon-color: #fe0000;
+            background: white;
+          }
+  - type: grid
+    cards:
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: remote.toggle
+          data: {}
+          target:
+            entity_id: remote.65_onn_roku_tv
+        icon: mdi:power
+        hold_action:
+          action: none
+        entity: null
+        show_state: false
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            command: back
+          target:
+            entity_id: remote.65_onn_roku_tv
+        icon: mdi:arrow-left-bold
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.select_source
+          data:
+            source: Home
+          target:
+            entity_id: media_player.android_tv
+        icon: mdi:home
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            command: find_remote
+          target:
+            entity_id: remote.65_onn_roku_tv
+        hold_action:
+          action: none
+        show_state: false
+        icon: mdi:remote
+      - show_name: false
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            command: up
+            num_repeats: 1
+            delay_secs: 0.4
+            hold_secs: 0
+          target:
+            entity_id: remote.65_onn_roku_tv
+        icon: mdi:chevron-up
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.volume_mute
+          data:
+            is_volume_muted: false
+          target:
+            entity_id: media_player.android_tv
+        icon: mdi:volume-off
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            command: left
+            num_repeats: 1
+            delay_secs: 0.4
+            hold_secs: 0
+          target:
+            entity_id: remote.65_onn_roku_tv
+        icon: mdi:chevron-left
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            command: select
+            num_repeats: 1
+            delay_secs: 0.4
+            hold_secs: 0
+          target:
+            entity_id: remote.65_onn_roku_tv
+        icon: mdi:checkbox-blank-circle
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            command: right
+            num_repeats: 1
+            delay_secs: 0.4
+            hold_secs: 0
+          target:
+            entity_id: remote.65_onn_roku_tv
+        icon: mdi:chevron-right
+        show_state: false
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.volume_down
+          data: {}
+          target:
+            entity_id: media_player.android_tv
+        icon: mdi:volume-medium
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: remote.send_command
+          data:
+            command: down
+            num_repeats: 1
+            delay_secs: 0.4
+            hold_secs: 0
+          target:
+            entity_id: remote.65_onn_roku_tv
+        icon: mdi:chevron-down
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: media_player.volume_up
+          data: {}
+          target:
+            entity_id: media_player.android_tv
+        icon: mdi:volume-high
+        hold_action:
+          action: none
