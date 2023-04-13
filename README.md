@@ -18,3 +18,9 @@ mini_media_player_button การ์ดเล่นเพลง/มีเดี
 <br />
 apexcharts_radialBar_SystemInfo การ์ดกราฟครึ่งวงกลม
 <br />
+<picture>
+<img src="/button_remote_with_swipe.gif">
+</picture>
+<br />
+button_remote_with_swipe การ์ดรีโมตคอนโทรล พร้อมปุ่มรายการโปรดแบบ swipe
+<br />
