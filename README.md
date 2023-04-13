@@ -12,3 +12,9 @@ apexcharts_graph_seven_days เป็นตัวอย่างการสร�
 <br />
 mini_media_player_button การ์ดเล่นเพลง/มีเดีย
 <br />
+<picture>
+<img src="/apexcharts_radialBar_SystemInfo.png">
+</picture>
+<br />
+apexcharts_radialBar_SystemInfo การ์ดกราฟครึ่งวงกลม
+<br />
